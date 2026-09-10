@@ -23,7 +23,8 @@ class Calculator:
 
     def divide(self, a, b):
         """
-        Returns the quotient of two numbers. Throws ValueError if division by zero.
+        Returns the quotient of two numbers.
+        Throws ValueError if division by zero.
         """
         if b == 0:
             raise ValueError("Divide by zero not allowed")

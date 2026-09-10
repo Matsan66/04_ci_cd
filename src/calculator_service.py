@@ -1,6 +1,3 @@
-from unittest import case
-
-
 class CalculatorService:
     """
     Represents a calculator service.

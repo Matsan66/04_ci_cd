@@ -1,5 +1,6 @@
 import pytest
 
+
 @pytest.mark.parametrize(
     # Adds test parameters for all addition tests
     # Arrange
@@ -15,7 +16,6 @@ import pytest
         pytest.param(1.5, 2.5, 4.0, id="decimal_numbers"),
     ],
 )
-
 @pytest.mark.unittest
 def test_calculator_add(a, b, expected, test_calculator):
     """
@@ -28,7 +28,6 @@ def test_calculator_add(a, b, expected, test_calculator):
     # Assert
     assert result == expected
 
-# ------------------------------------------------------------------------
 
 @pytest.mark.parametrize(
     # Adds test parameters for all subtraction tests
@@ -47,7 +46,6 @@ def test_calculator_add(a, b, expected, test_calculator):
         pytest.param(5.5, 2.5, 3.0, id="decimal_numbers"),
     ],
 )
-
 @pytest.mark.unittest
 def test_calculator_subtract(a, b, expected, test_calculator):
     """
@@ -59,9 +57,6 @@ def test_calculator_subtract(a, b, expected, test_calculator):
 
     # Assert
     assert result == expected
-
-
-# ------------------------------------------------------------------------
 
 
 @pytest.mark.parametrize(
@@ -80,7 +75,6 @@ def test_calculator_subtract(a, b, expected, test_calculator):
         pytest.param(1.5, 2.5, 3.75, id="decimal_numbers"),
     ],
 )
-
 @pytest.mark.unittest
 def test_multiply(a, b, expected, test_calculator):
     """
@@ -92,9 +86,6 @@ def test_multiply(a, b, expected, test_calculator):
 
     # Assert
     assert result == expected
-
-
-# ------------------------------------------------------------------------
 
 
 @pytest.mark.parametrize(
@@ -112,7 +103,6 @@ def test_multiply(a, b, expected, test_calculator):
         pytest.param(5.5, 2.0, 2.75, id="decimal_numbers"),
     ],
 )
-
 @pytest.mark.unittest
 def test_divide(a, b, expected, test_calculator):
     """
@@ -125,10 +115,12 @@ def test_divide(a, b, expected, test_calculator):
     # Assert
     assert result == expected
 
+
 @pytest.mark.unittest
 def test_divide_by_zero(test_calculator):
     """
-    Tests that the calculator correctly throws a ValueError exception if division by zero.
+    Tests that the calculator correctly throws a ValueError exception
+    when division by zero.
     :param test_calculator: A calculator fixture
     """
     # Prepare
