@@ -8,5 +8,5 @@ def test_calculator():
     return Calculator()
 
 @pytest.fixture
-def calculator_service(calculator):
+def calculator_service(test_calculator):
     return CalculatorService(test_calculator)
