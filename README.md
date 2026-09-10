@@ -37,7 +37,27 @@ från, dev eller main.
 
 
 ## 2️⃣Projekt
-todo
+Jag har valt att skapa två enkla klasser där fokus varit på att öva på metodik snarare än avancerad funktionalitet. En klass, Calculator, simulerar en 
+miniräknare som klarar räknesätten addition, subtraktion, multiplikation och division. Klasser har en metod för varje räknesätt som returnerar resultatet 
+av beräkningen av två parametrar. Klassen CalculatorService har en metod som tar en calculator, ett räknesätt och två tal som parametrar. 
+Jag har valt att 
+enhetstesta Calculator och endast Integrationstesta Calculator_Service. 
+
+Som övning har jag utnyttjat parameterisering i mina enhetstester.
+
+### Testfiler
+#### Unittester
+tests/unit/test_calculator_unit.py
+
+``` python
+pytest -v -m unittest
+```
+#### Integrationstester
+tests/integration/test_calculator_calculator_service.py
+
+``` python
+pytest -v -m integrationtest
+```
 
 ## 3️⃣Extra
 todo
