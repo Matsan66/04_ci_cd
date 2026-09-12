@@ -6,8 +6,8 @@ Här nedan presenteras en översikt över statusen på lösande av uppgfterna.
 | Uppgift                           | Status |
 |:----------------------------------|:------:|
 | 1. Diskutera tillsammans          |   🟢   |
-| 2. Projekt                        |   🔴   |
-| 3. Extra                          |   🔴   |
+| 2. Projekt                        |   🟢   |
+| 3. Extra                          |   🟡   |
 
 
 ## 1️⃣Diskutera tillsammans
@@ -15,7 +15,7 @@ Här nedan presenteras en översikt över statusen på lösande av uppgfterna.
 CI & CD medger att nya features och funktionalitet snabbt kan levereras med hög kvalité. Samtliga stakeholders 
 kan ta del av den senaste koden och feedback kan snabbt leda till åtgärder.  
 
-
+ 
 2. Vad är poängen med linting?  
 Jag har främst använt linting vid html design. Linting möjliggör att samtliga i ett projekt följer samma regler avseende stil och kod.
 Linting hjälper utveckalren att hitta fel och inkonsekvent eller onödigt komplicerad design
@@ -60,4 +60,25 @@ pytest -v -m integrationtest
 ```
 
 ## 3️⃣Extra
-todo
+
+1. Ta reda på hur man kan konfigurera branches på GitHub, så att de t.ex. kräver att en pull request måste godkännas av ett visst antal kollegor
+
+- Öppna repositoryt på GitHub.  
+- Gå till "Settings" → "Rules" → "Rulesets".  
+- Skapa ett New branch ruleset.  
+- Under "Target branches", ange branch att skydda t.ex. "main".  
+- Under "branch protections", aktivera "Require a pull request before merging".  
+- Ange att Pull Requesten ska kräva approving reviews och ange antalet.  
+- Sätt exempelvis Required approvals = 2.  
+- Aktivera rulesetet.  
+
+![Krav review](src/images/task_3_1.png)
+
+Konfigurera repositoryt så att det stoppar en commit om testerna misslyckas, och inte bara rapporterar fel.   
+Utöver åtgärderna i beskrivning 1 ova./n, gör även:
+
+- Aktivera "Require status checks to pass before merging".
+- Välj GitHub Actions-jobbet som ska vara obligatoriskt, exempelvis "build-and-test"
+ 
+![Krav review](src/images/task_3_2.png)
+
